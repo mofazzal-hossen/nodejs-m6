@@ -1,7 +1,72 @@
 [
     {
         "id": 1,
-        "name": "product -2",
-        "gmail": "hololala@gmail.com "
+        "name": "iPhone 15 Pro",
+        "price": 1299,
+        "brand": "Apple",
+        "category": "Smartphone"
+    },
+    {
+        "id": 2,
+        "name": "Galaxy S24 Ultra",
+        "price": 1199,
+        "brand": "Samsung",
+        "category": "Smartphone"
+    },
+    {
+        "id": 3,
+        "name": "MacBook Air M3",
+        "price": 1499,
+        "brand": "Apple",
+        "category": "Laptop"
+    },
+    {
+        "id": 4,
+        "name": "Dell XPS 15",
+        "price": 1399,
+        "brand": "Dell",
+        "category": "Laptop"
+    },
+    {
+        "id": 5,
+        "name": "Sony WH-1000XM5",
+        "price": 399,
+        "brand": "Sony",
+        "category": "Headphone"
+    },
+    {
+        "id": 6,
+        "name": "iPad Pro 13",
+        "price": 1099,
+        "brand": "Apple",
+        "category": "Tablet"
+    },
+    {
+        "id": 7,
+        "name": "Apple Watch Series 9",
+        "price": 499,
+        "brand": "Apple",
+        "category": "Smart Watch"
+    },
+    {
+        "id": 8,
+        "name": "Canon EOS R50",
+        "price": 899,
+        "brand": "Canon",
+        "category": "Camera"
+    },
+    {
+        "id": 9,
+        "name": "Logitech MX Master 3S",
+        "price": 99,
+        "brand": "Logitech",
+        "category": "Mouse"
+    },
+    {
+        "id": 10,
+        "name": "ASUS ROG Strix G16",
+        "price": 1799,
+        "brand": "ASUS",
+        "category": "Gaming Laptop"
     }
 ]
