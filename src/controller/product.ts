@@ -1,11 +1,11 @@
 import type { IncomingMessage, ServerResponse, } from "http";
 import { readProduct } from "../servise/productServese";
 import type { IProduct } from "../types/product.types";
-import { paresBody } from "../utility/parsBody";
+import { parseBody } from "../utility/parsBody";
 
 
 export const product = async (req: IncomingMessage, res: ServerResponse) => {
-    console.log("request", req)
+
     const url = req.url;
     const method = req.method;
     //product ==> /product/1 => []
@@ -34,7 +34,7 @@ export const product = async (req: IncomingMessage, res: ServerResponse) => {
 
 
     } else if (method === "POST" && url === '/products') {
-        const body = await paresBody(req)
+        const body = await parseBody(req)
         console.log(body)
         res.writeHead(200, { "content-type": "application/json" })
         res.end(JSON.stringify({ message: "product retrieved successful ", data: product }))
