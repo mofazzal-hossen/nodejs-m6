@@ -4,6 +4,7 @@ import type { IProduct } from "../types/product.types";
 import { parseBody } from "../utility/parsBody";
 
 
+
 export const product = async (req: IncomingMessage, res: ServerResponse) => {
 
     const url = req.url;
@@ -34,6 +35,8 @@ export const product = async (req: IncomingMessage, res: ServerResponse) => {
 
 
     } else if (method === "POST" && url === '/products') {
+        //created product by post method
+
         const body = await parseBody(req)
         const products = readProduct();
 
@@ -52,7 +55,46 @@ export const product = async (req: IncomingMessage, res: ServerResponse) => {
             data: newProduct
         }))
 
-    }
+    } else if (method === "PUT" && id !== null) {
 
+        const body = await parseBody(req);
+
+        const products = readProduct();
+
+        const index = products.findIndex(
+            (p: IProduct) => p.id === id
+        );
+
+        console.log(index);
+
+        if (index < 0) {
+
+            res.writeHead(404, {
+                "content-type": "application/json"
+            });
+
+            res.end(JSON.stringify({
+                message: "Product not found"
+            }));
+
+            return;
+        }
+
+        // products[index] = {
+        //     ...products[index],
+        //     ...body
+        // };
+
+        // insertProduct(products);
+
+        // res.writeHead(200, {
+        //     "content-type": "application/json"
+        // });
+
+        // res.end(JSON.stringify({
+        //     message: "Product updated successfully",
+        //     data: products[index]
+        // }));
+    }
 
 }
